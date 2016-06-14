@@ -1,0 +1,7 @@
+use_frameworks!
+target 'MonkeyPatch_Tests' do
+  pod 'MonkeyPatch', :path => '../'
+  
+  pod 'Quick', '~> 0.8'
+  pod 'Nimble', '~> 3.0'
+end
