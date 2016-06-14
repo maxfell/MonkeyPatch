@@ -1,0 +1,22 @@
+{
+  "name": "MonkeyPatch",
+  "version": "1.0.0",
+  "summary": "MonkeyPatch supplies Types with the ability to store temporary replacement values that are persisted using `UserDefaults`",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/MonkeyPatch",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Max Fellmuth": "max@maxfellmuth.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/MonkeyPatch.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MonkeyPatch/Classes/**/*"
+}
