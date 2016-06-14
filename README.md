@@ -8,24 +8,29 @@
 
  > MonkeyPatch allows you to temporarliy replace values in you project during runtime with an extremely minimal code surface.
 
+```ruby
+pod "MonkeyPatch"
+```
+
 ## Whaaaat?
 They say a line of code is better than a thousand words:
+
+1️⃣ Let's suppose we have a String like the right one ("Richard Hendricks").
 ```swift
-
-// 1️⃣ Let's suppose we have a String like the right one ("Richard Hendricks").
-
 print("PiedPiper CEO: ", "Richard Hendricks")
 // => "PiedPiper CEO: Richard Hendricks"
+```
 
-// 2️⃣ If we provie a MonkeyPatch key and no value has been set for it, everything works as before.
-
-let currentCEO = "Richard Hendricks".monkeyPatch("replacementCEO")
-print("PiedPiper CEO: ", "Richard Hendricks")
+2️⃣ If we provie a MonkeyPatch key and no value has been set for it, everything works as before.
+```swift
+print("PiedPiper CEO: ", "Richard Hendricks".monkeyPatch("replacementCEO"))
 // => "PiedPiper CEO: Richard Hendricks"
+```
 
-// 3️⃣ BUT! If we have provided a value for the "replacementCEO" key anywhere in the app, that value will be returned.
-
+3️⃣ BUT! If we have provided a value for the `"replacementCEO"` key anywhere in the app, that value will be returned.
+```swift
 String.setMonkeyPatch("replacementCEO", "Jack Barker")
+
 print("PiedPiper CEO: ", "Richard Hendricks".monkeyPatch("replacementCEO"))
 // => "PiedPiper CEO: Jack Barker"
 ```
